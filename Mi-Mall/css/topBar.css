@@ -1,0 +1,96 @@
+body{/*直接官网上打开开发者模式直接去看元素的宽高等*/
+    font: 14px / 1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+   color: #3331;
+   background-color: #fff;
+   min-width: 1226px;
+}
+
+.topBar{
+    width: 100%;
+    height: 40px;
+    background-color:#333;
+    position: relative;
+   
+}
+.container{
+    width: 1226px;
+    height: 100%;
+   margin: 0 auto;
+
+}
+.topBar .topBar_list{
+float: left;
+}
+.topBar .login{
+float: right;
+}
+.topBar .shop{ /*有浮动在最右边 其余的会按顺序也浮动在右侧*/
+float:right;
+line-height: 40px;
+height: 40px;
+text-align:center;
+background-color: #424242;
+width: 120px;
+margin-left: 15px;/*和左边文字离得太近*/
+
+}
+.topBar a{/*因为list login shop元素下的a标签使用的字体等都是一样的所以
+    要在他们共同的父标签去设置 因为container不仅在顶部布局中使用到
+    在脚部 内容 导航栏中也有使用这里设置了会影响其他栏的样 布局*/
+color: #b0b0b0;
+font-size: 12px;
+display: inline-block; /*因为不仅鼠标放在文字上显示小手的鼠标样式
+点在下面上面也显示，说明文字是一个行列块（inline-block）*/
+line-height: 40px;/*设置行列块和topbar的高度一致*/
+}
+.topBar span{
+    margin: auto;
+    color: #424242;
+    margin: 0 .3em;
+}
+.topBar.shop a{
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+ 
+}
+.topBar a:hover{
+    color: white;
+
+}
+.topBar .topBar_list .erweima{
+    border: 1px solid black;
+    visibility: hidden;;
+}
+.topBar .topBar_list .img-ma{
+    text-decoration: none;
+}
+.img-ma:hover .erweima{
+    visibility: visible;
+}
+
+
+.topBar .shop a.tooltip{
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    right:140px;
+    width: 120px;
+
+}
+.topBar .shop .tooltiptext {
+    visibility: hidden;
+    float: right;
+  width: 310px;
+   
+    height: 100px;
+    background-color:bisque;
+    color:black;
+    text-align: center;
+    /* 定位 */
+   
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
